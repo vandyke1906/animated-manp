@@ -28,7 +28,17 @@ export default {
           100:'#8E983F',
           300:'#EDFF66'
         },
-      }
+      },
+      animation: {
+        'fade-up': 'fadeUp 2s infinite ease-in-out',
+      },
+      keyframes: {
+        fadeUp: {
+          '0%, 100%': { opacity: 0, transform: 'translateY(10px)' },
+          '50%': { opacity: 1, transform: 'translateY(0)' },
+        },
+      },
+
     },
   },
   plugins: [],

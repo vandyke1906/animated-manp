@@ -48,11 +48,30 @@ body {
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-lg font-semibold uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    /* @apply relative ms-10 font-general text-lg font-semibold uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer; */
+    @apply relative ms-10 font-general text-lg font-semibold uppercase after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+  }
+
+  .nav-hover-btn:hover {
+   color: 	#228B22;
+  }
+
+  .primary-color {
+    color: 	#228B22;
+  }
+
+  .primary-bg-color {
+    background-color: 	#228B22;
   }
 
   .floating-nav {
-    @apply bg-black rounded-lg border;
+    /* @apply bg-black rounded-lg border; */
+    @apply bg-white rounded-lg border;
+  }
+
+  .floating-nav-text {
+    /* @apply bg-black rounded-lg border; */
+    color: #097969;
   }
 
   .absolute-center {
@@ -73,7 +92,7 @@ body {
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    @apply uppercase font-zentry font-black text-3xl sm:right-10 sm:text-5xl md:text-7xl lg:text-[6rem];
   }
 
   .about-subtext {

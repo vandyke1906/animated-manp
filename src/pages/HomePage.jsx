@@ -6,6 +6,7 @@ import Footer from "../components/Footer"
 import Hero from "../components/Hero"
 import Navbar from "../components/Navbar"
 import History from "../components/History"
+import ScrollToTop from '../components/ScrollToTop'
 
 const HomePage = () => {
   return (
@@ -17,6 +18,7 @@ const HomePage = () => {
         <History />
         <Contact />
         <Footer />
+        <ScrollToTop />
   </main>
   )
 }

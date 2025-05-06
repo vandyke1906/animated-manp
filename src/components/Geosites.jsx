@@ -2,7 +2,7 @@
 import { useState, useRef } from "react";
 import { FaEye } from "react-icons/fa";
 import { TiEye } from "react-icons/ti";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export const BentoTilt = ({ children, className = "" }) => {
   const [transformStyle, setTransformStyle] = useState("");
@@ -83,7 +83,7 @@ export const BentoCard = ({ poster = "", src, title, description, isReadMore, re
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full bg-black px-5 py-2 text-xs uppercase text-white/20"
+            className="border-hsla relative flex w-fit cursor-pointer items-center gap-1 overflow-hidden rounded-full primary-bg-color px-5 py-2 text-xs uppercase text-white"
             onClick={(e) => readMoreFunc(e)}
           >
             {/* Radial gradient hover effect */}
@@ -131,7 +131,6 @@ const Geosites = () => {
             description="The Seven Peaks of Mt. Apo is the main remnant of the volcanic dome of the potentially active volcano before it collapsed..."
             isReadMore
             readMoreFunc={() => {
-              console.log("test");
               navigate("/geosite/seven-peaks");
             }}
           />
@@ -149,6 +148,9 @@ const Geosites = () => {
               }
               description="The boulders of Mt. Apo are remnants of an ancient eruption, leaving the southeast scarred with fissures and solfatara along the trail"
               isReadMore
+              readMoreFunc={() => {
+                navigate("/geosites/boulders");
+              }}
             />
           </BentoTilt>
 
@@ -163,6 +165,9 @@ const Geosites = () => {
               }
               description="Formed by Mt. Apo’s prehistoric eruption, this endorheic lake has no outlet and serves as a catchment basin, spanning about 100 meters in diameter."
               isReadMore
+              readMoreFunc={() => {
+                navigate("/geosites/creater");
+              }}
             />
           
           </BentoTilt>
@@ -178,6 +183,9 @@ const Geosites = () => {
               }
               description="The Mandarangan Sulfatara likely formed from magma heating groundwater, causing it to rise and react with rocks, creating sulfur deposits."
               isReadMore
+              readMoreFunc={() => {
+                navigate("/geosites/solfatara");
+              }}
             />
           
           </BentoTilt>
@@ -187,8 +195,9 @@ const Geosites = () => {
               <h1 className="bento-title special-font max-w-64 text-black">
                 M<b>o</b>re g<b>eo</b>sites .
               </h1>
-
-              <TiEye className="m-5 scale-[5] self-end" />
+              <Link to="/geosites" className="m-5 scale-[5] self-end">
+                <TiEye />
+              </Link>
             </div>
           </BentoTilt>
 
