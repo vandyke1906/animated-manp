@@ -5,7 +5,7 @@ import { useWindowScroll } from "react-use";
 import gsap from "gsap";
 import { FiMenu, FiX } from "react-icons/fi";
 
-const navItems = ['Home', 'About', 'Geosites', 'History', 'Contact Us'];
+const navItems = ['Home', 'About', 'Geosites', 'History', 'Contact_Us'];
 
 const Navbar = () => {
     const navContainerRef = useRef(null);
@@ -61,15 +61,33 @@ const Navbar = () => {
                 <nav className="flex size-full items-center justify-between p-4" >
                     <div className="flex items-center gap-5" >
                         <img src="/img/logo.png" alt="logo" className="w-20" />
-                        <img src="/img/geopark-logo.png" alt="logo-geopark" className="w-20" />
+                        <img src="/img/asean-heritage-logo.png" alt="logo-asean-heritage-park" className="w-20" />
                         {/* <Button id="product-button" title="Products" rightIcon={<TiLocationArrow />} containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1" /> */}
                     </div>
+
+                    {/* for mobile menu */}
+                    <div id="mobile-menu">
+                        <div className={`absolute left-1/2 z-10 mt-12 flex w-screen max-w-max -translate-x-1/2 px-4 ${isNavMobileOpen ? 'block'  : 'hidden'}`}>
+                            <div className="rounded-2xl w-screen max-w-md flex-auto overflow-hidden bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
+                                <div className="p-4">
+                                    {navItems.map((item, index) => (
+                                        <div key={index} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
+                                            <a  href={`#${item.toLocaleLowerCase()}`} className="nav-hover-btn primary-color">
+                                                {item.replaceAll("_", " ")}
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {/* for mobile menu */}
                     
-                    <div id="mobile-menu" className="flex h-full items-center">
-                        <div ref={navMenuRef} className={`md:block text-black ${isNavMobileOpen ? 'block' : 'hidden'}`} >
+                    <div className="flex h-full items-center">
+                        <div ref={navMenuRef} className="md:block text-black hidden">
                             {navItems.map((item, index) => (
                                 <a key={index} href={`#${item.toLocaleLowerCase()}`} className="nav-hover-btn"  >
-                                    {item}
+                                    {item.replaceAll("_", " ")}
                                 </a>
                             ))}
                         </div>
@@ -88,8 +106,6 @@ const Navbar = () => {
                             {isNavMobileOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                         </button>
                         {/* for mobile */}
-
-                        
                     </div>
 
                 </nav>
