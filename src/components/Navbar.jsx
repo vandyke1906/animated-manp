@@ -7,7 +7,7 @@ import { FiMenu, FiX } from "react-icons/fi";
 
 const navItems = ['Home', 'About', 'Geosites', 'History', 'Contact_Us'];
 
-const Navbar = () => {
+const Navbar = ({ isHome = true }) => {
     const navContainerRef = useRef(null);
     const navMenuRef = useRef(null);
     const audioElementRef = useRef(null);
@@ -72,7 +72,7 @@ const Navbar = () => {
                                 <div className="p-4">
                                     {navItems.map((item, index) => (
                                         <div key={index} className="group relative flex gap-x-6 rounded-lg p-4 hover:bg-gray-50">
-                                            <a  href={`#${item.toLocaleLowerCase()}`} className="nav-hover-btn primary-color">
+                                            <a  href={isHome ? `#${item.toLocaleLowerCase()}` : `${window.location.origin}/#${item.toLocaleLowerCase()}`} className="nav-hover-btn primary-color">
                                                 {item.replaceAll("_", " ")}
                                             </a>
                                         </div>
@@ -86,7 +86,7 @@ const Navbar = () => {
                     <div className="flex h-full items-center">
                         <div ref={navMenuRef} className="md:block text-black hidden">
                             {navItems.map((item, index) => (
-                                <a key={index} href={`#${item.toLocaleLowerCase()}`} className="nav-hover-btn"  >
+                                <a key={index} href={isHome ? `#${item.toLocaleLowerCase()}` : `${window.location.origin}/#${item.toLocaleLowerCase()}`} className="nav-hover-btn"  >
                                     {item.replaceAll("_", " ")}
                                 </a>
                             ))}
