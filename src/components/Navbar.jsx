@@ -67,7 +67,7 @@ const Navbar = ({ isHome = true }) => {
 
                     {/* for mobile menu */}
                     <div id="mobile-menu">
-                        <div className={`absolute left-1/2 z-10 mt-12 flex w-screen max-w-max -translate-x-1/2 px-4 ${isNavMobileOpen ? 'block'  : 'hidden'}`}>
+                        <div className={`visible sm:invisible absolute left-1/2 z-10 mt-12 flex w-screen max-w-max -translate-x-1/2 px-4 ${isNavMobileOpen ? 'block'  : 'hidden'}`}>
                             <div className="rounded-2xl w-screen max-w-md flex-auto overflow-hidden bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
                                 <div className="p-4">
                                     {navItems.map((item, index) => (
