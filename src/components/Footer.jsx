@@ -22,6 +22,7 @@ const Footer = () => {
                             </a>
                         ))}
                     </div>
+                    <p className="text-center text-sm md:text-right">mtaponaturalpark@gmail.com</p>
                     <a href="#privacy-policy" className="text-center text-sm hover:underline md:text-right" >Privacy Policy</a>
 
                 </div>
