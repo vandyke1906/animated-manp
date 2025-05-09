@@ -8,7 +8,8 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/geosites" element={<GeositesList />}>
+      <Route path="/geosites" >
+        <Route index element={<GeositesList />} />
         <Route path=":name" element={<GeositeDetails />} />
       </Route>
       <Route path="/discover-more" element={<DiscoverMore />} />

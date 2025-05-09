@@ -11,8 +11,14 @@ const Footer = () => {
     return (
         <footer className="w-screen bg-green-700 py-10 text-black">
             <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row" >
-                <p className="text-center text-sm md:text-left" >
-                    &copy; Mount Apo Geopark 2025. All rights reserved.
+                <p className="text-center text-sm md:text-left flex flex-col items-center " >
+                    <h3 className="text-center text-white"><b>&copy; Mount Apo Geopark</b> 2025. All rights reserved.</h3>
+                    <div className="flex items-center w-15 gap-2">
+                        <img src="/img/manp.png" alt="manp" className="w-20" />
+                        <img src="/img/logo.png" alt="logo" className="w-20" />
+                        <img src="/img/asean-heritage-logo.png" alt="asean-heritage" className="w-20" />
+                        <img src="/img/geopark-logo.png" alt="geopark" className="w-20" />
+                    </div>
                 </p>
                 <div className="flex flex-col justify-center items-center gap-4">
                     <div className="flex justify-center gap-4 md:justify-start">

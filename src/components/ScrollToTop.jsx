@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaArrowUp } from "react-icons/fa";
 
-const ScrollToTop = () => {
+const ScrollToTop = ( { goToTop = false }) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -12,6 +12,13 @@ const ScrollToTop = () => {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+
+    useEffect(() => {
+        if(goToTop){
+            scrollToTop();
+        }
+    }, [goToTop])
 
     const scrollToTop = () => {
         window.scrollTo({
