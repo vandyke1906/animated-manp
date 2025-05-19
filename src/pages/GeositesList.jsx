@@ -27,7 +27,7 @@ const GeositesList = () => {
               
               <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 sm:grid-cols-1">
                 <BentoCard
-                  poster="img/geosites/boulders-001.jpg"
+                  poster="img/geosites/boulders/boulders-001.jpg"
                   src="videos/feature.mp4"
                   title={
                     <>
@@ -44,7 +44,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0 sm:grid-cols-1">
                 <BentoCard
-                  poster="img/geosites/crater-001.jpg"
+                  poster="img/geosites/crater/crater-001.jpg"
                   src="videos/feature.mp4"
                   title={
                     <>
@@ -61,7 +61,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_1 sm:col-span-2 md:col-span-1 md:me-0 sm:grid-cols-1">
                 <BentoCard
-                  poster="img/geosites/solfatara-001.jpg"
+                  poster="img/geosites/solfatara/solfatara-001.jpg"
                   src="videos/feature.mp4"
                   title={
                     <>
@@ -78,7 +78,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_2">
                   <BentoCard
-                      poster="img/geosites/solfatara-001.jpg"
+                      poster="img/geosites/solfatara/solfatara-001.jpg"
                       src="videos/feature.mp4"
                       title={
                         <>
@@ -95,7 +95,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_2">
                 <BentoCard
-                    poster="img/geosites/crater-001.jpg"
+                    poster="img/geosites/crater/crater-001.jpg"
                     src="videos/feature.mp4"
                     title={
                       <>
@@ -112,7 +112,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 sm:grid-cols-1">
                 <BentoCard
-                  poster="img/geosites/boulders-001.jpg"
+                  poster="img/geosites/boulders/boulders-001.jpg"
                   src="videos/feature.mp4"
                   title={
                     <>
@@ -129,7 +129,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0 sm:grid-cols-1">
                 <BentoCard
-                  poster="img/geosites/crater-001.jpg"
+                  poster="img/geosites/crater/crater-001.jpg"
                   src="videos/feature.mp4"
                   title={
                     <>
@@ -146,7 +146,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_1 sm:col-span-2 md:col-span-1 md:me-0 sm:grid-cols-1">
                 <BentoCard
-                  poster="img/geosites/solfatara-001.jpg"
+                  poster="img/geosites/solfatara/solfatara-001.jpg"
                   src="videos/feature.mp4"
                   title={
                     <>
@@ -163,7 +163,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_2">
                   <BentoCard
-                      poster="img/geosites/solfatara-001.jpg"
+                      poster="img/geosites/solfatara/solfatara-001.jpg"
                       src="videos/feature.mp4"
                       title={
                         <>
@@ -180,7 +180,7 @@ const GeositesList = () => {
 
               <BentoTilt className="bento-tilt_2">
                 <BentoCard
-                    poster="img/geosites/crater-001.jpg"
+                    poster="img/geosites/crater/crater-001.jpg"
                     src="videos/feature.mp4"
                     title={
                       <>

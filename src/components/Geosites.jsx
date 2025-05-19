@@ -24,7 +24,7 @@ const Geosites = () => {
 
         <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
           <BentoCard
-            poster="img/geosites/seven-peaks-001.jpg"
+            poster="img/geosites/seven-peaks/seven-peaks-001.jpg"
             src="videos/feature.mp4"
             title={
               <>
@@ -34,7 +34,7 @@ const Geosites = () => {
             description="The Seven Peaks of Mt. Apo is the main remnant of the volcanic dome of the potentially active volcano before it collapsed..."
             isReadMore
             readMoreFunc={() => {
-              navigate("/geosites/seven-peaks");
+              navigate("/geosites/seven-peaks/seven-peaks");
             }}
           />
         </BentoTilt>
@@ -42,7 +42,7 @@ const Geosites = () => {
         <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7 md:grid-cols-2 sm:grid-cols-1">
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 sm:grid-cols-1">
             <BentoCard
-              poster="img/geosites/boulders-001.jpg"
+              poster="img/geosites/boulders/boulders-001.jpg"
               src="videos/feature.mp4"
               title={
                 <>
@@ -59,7 +59,7 @@ const Geosites = () => {
 
           <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0 sm:grid-cols-1">
             <BentoCard
-              poster="img/geosites/crater-001.jpg"
+              poster="img/geosites/crater/crater-001.jpg"
               src="videos/feature.mp4"
               title={
                 <>
@@ -77,7 +77,7 @@ const Geosites = () => {
 
           <BentoTilt className="bento-tilt_1 sm:col-span-2 md:col-span-1 md:me-0 sm:grid-cols-1">
             <BentoCard
-              poster="img/geosites/solfatara-001.jpg"
+              poster="img/geosites/solfatara/solfatara-001.jpg"
               src="videos/feature.mp4"
               title={
                 <>
