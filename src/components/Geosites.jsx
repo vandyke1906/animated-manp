@@ -34,7 +34,7 @@ const Geosites = () => {
             description="The Seven Peaks of Mt. Apo is the main remnant of the volcanic dome of the potentially active volcano before it collapsed..."
             isReadMore
             readMoreFunc={() => {
-              navigate("/geosites/seven-peaks/seven-peaks");
+              navigate("/geosites/seven-peaks");
             }}
           />
         </BentoTilt>
