@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ScrollToTop from '../components/ScrollToTop'
@@ -8,6 +8,12 @@ import { useNavigate } from "react-router";
 
 const History = () => {
   const navigate = useNavigate();
+  const [goToTop, setGoToTop] = useState(false);
+  
+  useEffect(() => {
+    setGoToTop(true);
+  }, []);
+
   return (
     <>
       <Navbar isHome={false} />
@@ -28,7 +34,7 @@ const History = () => {
         </BentoTilt>
       </div>
       <Footer />
-      <ScrollToTop />
+      <ScrollToTop goToTop={goToTop} />
     </>
   )
 }
