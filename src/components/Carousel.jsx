@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Parallax, EffectCoverflow } from 'swiper/modules';
+import { Autoplay, Parallax, EffectCoverflow, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import "../swiper.css";
 
@@ -22,12 +22,13 @@ const Carousel = () => {
   return (
     <div className="main-swiper">
       <Swiper
-        modules={[Autoplay, Parallax, EffectCoverflow]}
+        modules={[Autoplay, Parallax, EffectCoverflow, FreeMode]}
         effect={"coverflow"}
         autoplay={{
             delay: 2500,
             disableOnInteraction: false,
         }}
+        loop={true}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={"auto"}
