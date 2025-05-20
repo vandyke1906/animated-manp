@@ -22,10 +22,8 @@ const GeositeDetails = () => {
       <Navbar isHome={false} />
         <div className="my-20 min-h-96 w-screen px-10">
           <div className="py-10">
-            <AnimatedTitle title={data?.title || ""} containerClass="mt-5 !text-black text-center" textClass="special-font hero-heading text-center primary-color" />
-
             <Carousel />
-
+            <AnimatedTitle title={data?.title || ""} containerClass="mt-5 !text-black text-center" textClass="special-font hero-heading text-center primary-color" />
             <div className="mb-8 flex flex-col items-center gap-5" >
                 <h2 className="font-general text-sm md:text-[14px]" >{data?.description || ""}</h2>
             </div>
