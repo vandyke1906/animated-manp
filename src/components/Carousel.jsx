@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Parallax, EffectCoverflow, } from 'swiper/modules';
+import { Autoplay, Parallax, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import "../swiper.css";
 
@@ -46,6 +46,7 @@ const Carousel = () => {
           return (
             <SwiperSlide key={i}>
               <img src={img} alt="" />
+              <div className="swiper-lazy-preloader"></div>
             </SwiperSlide>
           );
         })}
