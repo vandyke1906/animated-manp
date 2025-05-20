@@ -69,7 +69,7 @@ const Geosites = () => {
               description="Formed by Mt. Apo’s prehistoric eruption, this endorheic lake has no outlet and serves as a catchment basin, spanning about 100 meters in diameter."
               isReadMore
               readMoreFunc={() => {
-                navigate("/geosites/creater");
+                navigate("/geosites/crater");
               }}
             />
           
