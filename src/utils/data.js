@@ -4,7 +4,7 @@ export const GeoSitesData = {
         description: "Seven(7) different peaks  can be seen at the summit of Mt. Apo and  peak hopping is the best thing to do. In one of those peaks ,  you can  feel being in an enchanted world by experiencing its  epic sunset and  in the morning , you can experience the mystic sunrise which gives unimaginable pleasure and under very good weather , you will observe the following : Davao side, South Cotabato’s Mt. Matutum, Lake Venado an other  surrounding provinces.",
         images: []
     },
-    "boulder-face" : {
+    "boulders" : {
         title: "Boulder Face", 
         description: `is one of the most striking and challenging landscapes on the Philippines' highest peak. This rugged terrain, characterized by massive volcanic boulders and steep ascents, forms a crucial part of the climb to Mount Apo’s summit. The area is known for its dramatic rock formations, sulfur vents, and expansive views of the surrounding forests and valleys.
             Trekkers navigating the Boulder Face Trail experience a thrilling ascent, often requiring careful footing and endurance as they traverse the rocky slopes. The contrast between the barren, rocky terrain and the lush greenery of the lower elevations makes this section of the climb particularly breathtaking.
