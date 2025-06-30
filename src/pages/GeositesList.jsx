@@ -5,6 +5,15 @@ import ScrollToTop from '../components/ScrollToTop'
 import BentoTilt from '../components/BentoTilt'
 import BentoCard from '../components/BentoCard'
 import { useNavigate } from 'react-router';
+import { GeoSitesData } from '../utils/data'
+
+const tiltClasses = [
+  "bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 sm:grid-cols-1",
+  "bento-tilt_1 sm:col-span-2 md:col-span-1 md:me-0 sm:grid-cols-1",
+  "bento-tilt_2",
+  "bento-tilt_1 row-span-1 md:col-span-1 md:ms-0 sm:grid-cols-1",
+];
+
 
 const GeositesList = () => {
   const navigate = useNavigate();
@@ -23,177 +32,27 @@ const GeositesList = () => {
         </div>
         <div className="container mx-auto px-3 md:px-10">
           
-            <div className="grid h-[200vh] w-full grid-cols-2 grid-rows-5 gap-7 md:grid-cols-2 sm:grid-cols-1">
+            <div className="grid w-full grid-cols-2 grid-rows-5 gap-7 md:grid-cols-2 sm:grid-cols-1">
               
-              <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 sm:grid-cols-1">
-                <BentoCard
-                  poster="img/geosites/boulders/boulders-001.jpg"
-                  src="videos/feature.mp4"
-                  title={
-                    <>
-                      B<b>ou</b>lder Face
-                    </>
-                  }
-                  description="The boulders of Mt. Apo are remnants of an ancient eruption, leaving the southeast scarred with fissures and solfatara along the trail"
-                  isReadMore
-                  readMoreFunc={() => {
-                    navigate("/geosites/boulders");
-                  }}
-                />
-              </BentoTilt>
+              {Object.entries(GeoSitesData).map(([key, site]) => {
+                const randomTiltClass = tiltClasses[Math.floor(Math.random() * tiltClasses.length)];
 
-              <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0 sm:grid-cols-1">
-                <BentoCard
-                  poster="img/geosites/crater/crater-001.jpg"
-                  src="videos/feature.mp4"
-                  title={
-                    <>
-                      Old <b>Apo Crater</b> Lake
-                    </>
-                  }
-                  description="Formed by Mt. Apo’s prehistoric eruption, this endorheic lake has no outlet and serves as a catchment basin, spanning about 100 meters in diameter."
-                  isReadMore
-                  readMoreFunc={() => {
-                    navigate("/geosites/crater");
-                  }}
-                />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_1 sm:col-span-2 md:col-span-1 md:me-0 sm:grid-cols-1">
-                <BentoCard
-                  poster="img/geosites/solfatara/solfatara-001.jpg"
-                  src="videos/feature.mp4"
-                  title={
-                    <>
-                      Mandarangan <b>Solfatara</b>
-                    </>
-                  }
-                  description="The Mandarangan Sulfatara likely formed from magma heating groundwater, causing it to rise and react with rocks, creating sulfur deposits."
-                  isReadMore
-                  readMoreFunc={() => {
-                    navigate("/geosites/solfatara");
-                  }}
-                />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_2">
-                  <BentoCard
-                      poster="img/geosites/solfatara/solfatara-001.jpg"
+                return (
+                  <BentoTilt key={key} className={randomTiltClass}>
+                    <BentoCard
+                      poster={site.cover}
                       src="videos/feature.mp4"
-                      title={
-                        <>
-                          Mandarangan <b>Solfatara</b>
-                        </>
-                      }
-                      description="The Mandarangan Sulfatara likely formed from magma heating groundwater, causing it to rise and react with rocks, creating sulfur deposits."
+                      title={site.title}
+                      description="The boulders of Mt. Apo are remnants of an ancient eruption, leaving the southeast scarred with fissures and solfatara along the trail"
                       isReadMore
                       readMoreFunc={() => {
-                        navigate("/geosites/solfatara");
+                        navigate(`/geosites/${key}`);
                       }}
                     />
-              </BentoTilt>
+                  </BentoTilt>
+                );
+              })}
 
-              <BentoTilt className="bento-tilt_2">
-                <BentoCard
-                    poster="img/geosites/crater/crater-001.jpg"
-                    src="videos/feature.mp4"
-                    title={
-                      <>
-                        Old <b>Apo Crater</b> Lake
-                      </>
-                    }
-                    description="Formed by Mt. Apo’s prehistoric eruption, this endorheic lake has no outlet and serves as a catchment basin, spanning about 100 meters in diameter."
-                    isReadMore
-                    readMoreFunc={() => {
-                      navigate("/geosites/crater");
-                    }}
-                  />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2 sm:grid-cols-1">
-                <BentoCard
-                  poster="img/geosites/boulders/boulders-001.jpg"
-                  src="videos/feature.mp4"
-                  title={
-                    <>
-                      B<b>ou</b>lder Face
-                    </>
-                  }
-                  description="The boulders of Mt. Apo are remnants of an ancient eruption, leaving the southeast scarred with fissures and solfatara along the trail"
-                  isReadMore
-                  readMoreFunc={() => {
-                    navigate("/geosites/boulders");
-                  }}
-                />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:ms-0 sm:grid-cols-1">
-                <BentoCard
-                  poster="img/geosites/crater/crater-001.jpg"
-                  src="videos/feature.mp4"
-                  title={
-                    <>
-                      Old <b>Apo Crater</b> Lake
-                    </>
-                  }
-                  description="Formed by Mt. Apo’s prehistoric eruption, this endorheic lake has no outlet and serves as a catchment basin, spanning about 100 meters in diameter."
-                  isReadMore
-                  readMoreFunc={() => {
-                    navigate("/geosites/crater");
-                  }}
-                />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_1 sm:col-span-2 md:col-span-1 md:me-0 sm:grid-cols-1">
-                <BentoCard
-                  poster="img/geosites/solfatara/solfatara-001.jpg"
-                  src="videos/feature.mp4"
-                  title={
-                    <>
-                      Mandarangan <b>Solfatara</b>
-                    </>
-                  }
-                  description="The Mandarangan Sulfatara likely formed from magma heating groundwater, causing it to rise and react with rocks, creating sulfur deposits."
-                  isReadMore
-                  readMoreFunc={() => {
-                    navigate("/geosites/solfatara");
-                  }}
-                />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_2">
-                  <BentoCard
-                      poster="img/geosites/solfatara/solfatara-001.jpg"
-                      src="videos/feature.mp4"
-                      title={
-                        <>
-                          Mandarangan <b>Solfatara</b>
-                        </>
-                      }
-                      description="The Mandarangan Sulfatara likely formed from magma heating groundwater, causing it to rise and react with rocks, creating sulfur deposits."
-                      isReadMore
-                      readMoreFunc={() => {
-                        navigate("/geosites/solfatara");
-                      }}
-                    />
-              </BentoTilt>
-
-              <BentoTilt className="bento-tilt_2">
-                <BentoCard
-                    poster="img/geosites/crater/crater-001.jpg"
-                    src="videos/feature.mp4"
-                    title={
-                      <>
-                        Old <b>Apo Crater</b> Lake
-                      </>
-                    }
-                    description="Formed by Mt. Apo’s prehistoric eruption, this endorheic lake has no outlet and serves as a catchment basin, spanning about 100 meters in diameter."
-                    isReadMore
-                    readMoreFunc={() => {
-                      navigate("/geosites/crater");
-                    }}
-                  />
-              </BentoTilt>
 
             </div>
 
