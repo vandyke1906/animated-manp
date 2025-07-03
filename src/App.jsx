@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import DiscoverMore from "./pages/DiscoverMore";
 import GeositeDetails from "./pages/GeositeDetails";
 import GeositesList from "./pages/GeositesList";
+import Map from "./pages/Map";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path=":id" element={<GeositeDetails />} />
       </Route>
       <Route path="/discover-more" element={<DiscoverMore />} />
+      <Route path="/map" element={<Map />} />
     </Routes>
   )
 }

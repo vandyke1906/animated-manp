@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import Button from "./Button";
 import AnimatedTitle from "./AnimatedTitle";
+import { useNavigate } from "react-router";
 
 const ImageClipBox = ({ src, clipClass }) => (
   <div className={clipClass} >
@@ -9,6 +10,7 @@ const ImageClipBox = ({ src, clipClass }) => (
 
 )
 const Contact = () => {
+  const navigate = useNavigate();
   return (
     <div id="contact_us" className="my-20 min-h-96 w-screen  px-10">
     <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
@@ -36,8 +38,10 @@ const Contact = () => {
           title="Let&#39;s <b>protect</b> <br />the beauty of <br /><b>Mt. Apo Natural Park</b> <br />for the future."
           className="special-font !md:text-[6.2rem] w-full font-zentry !text-5xl !font-black !leading-[.9]"
         />
-
-        <Button title="contact us" containerClass="mt-10 cursor-pointer" />
+        <div className="flex gap-4">
+          <Button title="contact us" containerClass="mt-10 cursor-pointer" />
+          <Button onClick={() => navigate("/map")} title="view map" containerClass="mt-10 text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" />
+        </div>
       </div>
     </div>
   </div>

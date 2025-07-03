@@ -1,4 +1,5 @@
 import { FaGithub, FaLinkedin, FaFacebook, FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa";
+import { Link } from "react-router";
 
 const links = [
     { href: 'https://www.facebook.com/denr-manp-pamo/', icon: <FaFacebook /> },
@@ -29,7 +30,10 @@ const Footer = () => {
                         ))}
                     </div>
                     <p className="text-center text-sm md:text-right">mtaponaturalpark@gmail.com</p>
-                    <a href="#privacy-policy" className="text-center text-sm hover:underline md:text-right" >Privacy Policy</a>
+                    <div className="flex gap-4">
+                        <Link to={"/map"} className="text-center text-sm hover:underline md:text-right">Map</Link>
+                        <a href="#privacy-policy" className="text-center text-sm hover:underline md:text-right">Privacy Policy</a>
+                    </div>
 
                 </div>
             </div>
