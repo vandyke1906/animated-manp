@@ -1,11 +1,27 @@
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaEye } from "react-icons/fa";
 
 export const BentoCard = ({ poster = "", src, title, description, isReadMore, readMoreFunc = () => {} }) => {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [hoverOpacity, setHoverOpacity] = useState(0);
     const hoverButtonRef = useRef(null);
+    const [isPosterLoaded, setIsPosterLoaded] = useState(false);
+    const posterRef = useRef(null);
+
+    useEffect(() => {
+      const img = posterRef.current;
+      if (!img) return;
+
+      if (img.complete && img.naturalWidth !== 0) {
+        setIsPosterLoaded(true);
+      } else {
+        const handleLoad = () => setIsPosterLoaded(true);
+        img.addEventListener("load", handleLoad);
+        return () => img.removeEventListener("load", handleLoad);
+      }
+    }, [poster]);
+
   
     const handleMouseMove = (event) => {
       if (!hoverButtonRef.current) return;
@@ -22,13 +38,33 @@ export const BentoCard = ({ poster = "", src, title, description, isReadMore, re
   
     return (
       <div className="relative size-full">
+        {!isPosterLoaded && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center bg-black/30">
+            <div className="animate-spin h-8 w-8 border-4 border-white border-t-transparent rounded-full"></div>
+          </div>
+        )}
+
+        <img
+          ref={posterRef}
+          src={poster}
+          alt="poster"
+          className="hidden"
+        />
+
         <video
+          alt="Poster"
           src={src}
+          preload="none"
           loop
           muted
           autoPlay
           poster={poster}
-          className="absolute left-0 top-0 size-full object-cover object-center"
+          className="absolute left-0 top-0 size-full object-cover object-center transition-all duration-700"
+          style={{
+            filter: isPosterLoaded ? 'none' : 'blur(20px)',
+            transform: isPosterLoaded ? 'scale(1)' : 'scale(1.05)',
+            opacity: isPosterLoaded ? 1 : 0.8,
+          }}
         />
         <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
           <div>

@@ -41,7 +41,7 @@ const GeositesList = () => {
                   <BentoTilt key={key} className={randomTiltClass}>
                     <BentoCard
                       poster={site.cover}
-                      src="videos/feature.mp4"
+                      src={null}
                       title={site.title}
                       description="The boulders of Mt. Apo are remnants of an ancient eruption, leaving the southeast scarred with fissures and solfatara along the trail"
                       isReadMore
