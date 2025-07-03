@@ -11,7 +11,9 @@ import axios from 'axios'
 
 const HomePage = () => {
   useEffect(() => {
-    axios.get("https://manp-api.onrender.com/api/clients").then(console.info);
+    axios.get("https://manp-api.onrender.com/api/clients").then((res) => {
+      console.info(`Backend request: ${!!res?.data?.success}`);
+    });
   });
   return (
     <main className="relative min-h-screen w-screen overflow-x-hidden" >
