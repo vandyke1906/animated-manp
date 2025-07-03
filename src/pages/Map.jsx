@@ -1,14 +1,20 @@
-import { useRef } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { MapContainer, TileLayer, Marker, Popup, Polygon } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import { MountApoCoordinates } from '../utils/data';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ScrollToTop from '../components/ScrollToTop';
+import "leaflet/dist/leaflet.css";
 
 const Map = () => {  
   const mapRef = useRef(null);
   const latitude = 6.98734;
   const longitude = 125.27103;
+  const [goToTop, setGoToTop] = useState(false);
+
+  useEffect(() => {
+    setGoToTop(true);
+  }, []);
   
   return (
     <>
@@ -26,6 +32,7 @@ const Map = () => {
         </Marker>
       </MapContainer>
       <Footer />
+      <ScrollToTop goToTop={goToTop} />
     </>
   )
 }
